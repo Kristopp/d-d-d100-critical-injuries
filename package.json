@@ -1,0 +1,37 @@
+{
+  "name": "injuries",
+  "version": "1.0.0",
+  "description": "d&d d100 critical injuries",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack --mode=development",
+    "build": "webpack --mode=production",
+    "dev-server": "webpack-dev-server"
+  },
+  "dependencies": {
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3",
+    "webpack": "^4.42.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-react": "^7.9.4",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^3.5.2",
+    "style-loader": "^1.1.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kristopp/d-d-d100-critical-injuries.git"
+  },
+  "keywords": [
+    "d&d"
+  ],
+  "author": "Kristopp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kristopp/d-d-d100-critical-injuries/issues"
+  },
+  "homepage": "https://github.com/Kristopp/d-d-d100-critical-injuries#readme"
+}
