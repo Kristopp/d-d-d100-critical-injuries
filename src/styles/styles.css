@@ -13,9 +13,12 @@ html {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-template-areas:
-        ". . ."
-        "lifeCont . dcont"
-        "life dice death";
+        "life life life . . death death"
+        "life life . . death death"
+        "life life . . death death"
+        "life life . . death death"
+        "life life .  dice . death"
+        "life life .  . death death";
     width: 100vw;
     height: 100vh;
 
