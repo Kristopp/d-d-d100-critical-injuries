@@ -9,26 +9,33 @@
     <link rel="shortcut icon" href="#" />
     <title>dungeon</title>
 </head>
-
 <body>
     <div class="main-container">
-        <div class="life" >
-            <div class="text-container-life">
-            </div>
+        <!-- life container -->
+        <div class="text-container-life">
+           <div class="li-life" id="li-life-category">* * * * * *</div>
+           <div class="li-life" id="li-life-d100">* * * * * *</div>
+           <div class="li-life" id="li-life-injuri">* * * * * *</div>
+           <div class="li-life" id="li-life-description">* * * * * *</div>
+           <div class="li-life" id="li-life-cure">* * * * * *</div>
+           <div class="li-life" id="li-life-duration">* * * * * *</div>
+           <div class="li-life" id="li-life-notes">* * * * * *</div>
         </div>
-        <div class="d100-hexagon">
-            <img class="d100" src="./assets/img/dice.svg" alt="dice-roll">
+        <!--category and hexagon-->
+        <div class="dice-container">
+            <img class="d100" id="d-100"src="./assets/img/dice.svg" alt="dice-roll">
         </div>
-    <div class="death">
-        <div class="death-container-text">
+        <!--death container-->
+        <div class="text-container-death">
+            <div class="li-death" id="li-death"></div>
+            <div class="li-death" id="li-death"></div>
+            <div class="li-death" id="li-death"></div>
+            <div class="li-death" id="li-death"></div>
+            <div class="li-death" id="li-death"></div>
+            <div class="li-death" id="li-death"></div>
+            <div class="li-death" id="li-death"></div>
         </div>
     </div>
-        
-        
-    </div>
-
-
-
     <script src="../public/bundle.js"></script>
 </body>
 
