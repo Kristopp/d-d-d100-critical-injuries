@@ -9,7 +9,7 @@ html {
 }
 
 .main-container {
-    display: inline-grid;
+    display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(4, 1fr);
     grid-template-areas:
@@ -21,22 +21,21 @@ html {
     width: 100vw;
 }
 
-/*life line properties*/
 .text-container-life {
     grid-area: life;
     margin: 1em 0.2em 1em 1em;
-    width: 80%;
-    height: 98%;
+    width: 85%;
+    height: 93%;
     background: rgba(252, 252, 252, 0.1);
     border: 3px solid #F8F8F8;
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-
-.text-container-life > div {
+.text-container-life>div {
     grid-area: liLife;
-    width: 95%;
-    height: 4em;
-    margin: 1em 2em 0 1em;
+    width: 85%;
+    height: 10%;
+    margin: 1.4em 0em 0 0.7em;
+    padding: 0em 0em 0em 2em;
     background: rgba(78, 76, 76, 0.418);
     border: 1px solid #F8F8F7;
     font-size: 20px;
@@ -45,7 +44,7 @@ html {
     align-items: center;
     text-align: center;
     letter-spacing: 0.2em;
-    color: #000000;
+    color: #F8F8F7;
 }
 
 
@@ -53,19 +52,20 @@ html {
 
 .text-container-death {
     grid-area: death;
-    margin: 1em 2em 0 1em;
+    margin: 1.4em 2em 0 0.7em;
     width: 80%;
-    height: 90%;
-    background: rgba(241, 241, 241, 0.1);
+    height: 93%;
+    background: rgba(0, 0, 0, 0);
     border: 3px solid #0E1111;
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.text-container-death > div {
+.text-container-death>div {
     display: flex;
-    width: 95%;
-    height: 4em;
-    margin: 1em 2em 0 1em;
+    width: 85%;
+    height: 10%;
+    margin: 1.4em 2em 0 1em;
+    padding: 0em 0em 0em 2em;
     background: rgba(196, 196, 196, 0.1);
     border: 1px solid #000000;
     font-size: 20px;
@@ -74,7 +74,7 @@ html {
     align-items: center;
     text-align: center;
     letter-spacing: 0.2em;
-    color: #000000;
+    color: rgb(255, 0, 0);
 }
 
 /*Dice properties*/
