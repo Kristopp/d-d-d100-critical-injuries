@@ -4,7 +4,7 @@ module.exports = {
   watch:true,
   entry: './src/index.js',
   output: {
-    path: path.join(__dirname, 'public'),
+    path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js'
   },
   module: {
@@ -23,6 +23,11 @@ module.exports = {
   },
   devtool: 'cheap-module-eval-source-map',
   devServer: {
-    contentBase: path.join(__dirname, 'public')
-  }
+    contentBase: "./build"
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.resolve('./index.html'),
+    }),
+  ]
 };
