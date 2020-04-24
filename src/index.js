@@ -28,11 +28,11 @@ window.addEventListener("DOMContentLoaded", () => {
 
       if (randomObject.d100 > 50) {
         for (let i = 0; i < 7; i++) {
-          mainElements.deathList[i].innerHTML = `${valueArray[i]}`
+          mainElements.lifeList[i].innerHTML = `${valueArray[i]}`
         }
       } else {
         for (let i = 0; i < 7; i++) {
-          mainElements.lifeList[i].innerHTML = `${valueArray[i]}`
+          mainElements.deathList[i].innerHTML = `${valueArray[i]}`
         }
       }
     }
