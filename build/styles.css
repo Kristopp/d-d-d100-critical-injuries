@@ -27,7 +27,7 @@ html {
     width: 85%;
     height: 93%;
     background: rgba(252, 252, 252, 0.1);
-    border: 3px solid rgb(36, 36, 35);
+    border: 3px solid #F8F8F8;
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .text-container-life>div {
@@ -36,8 +36,8 @@ html {
     height: 10%;
     margin: 1.4em 0em 0 0.7em;
     padding: 0em 0em 0em 2em;
-    background: rgba(65, 64, 64, 0.349);
-    border: 1px solid rgb(0, 0, 0);
+    background: rgba(78, 76, 76, 0.418);
+    border: 1px solid #F8F8F7;
     font-size: 20px;
     font-weight: 600;
     word-wrap: break-word;
@@ -57,7 +57,7 @@ html {
     width: 80%;
     height: 93%;
     background: rgba(0, 0, 0, 0);
-    border: 3px solid rgb(66, 66, 65);
+    border: 3px solid #0E1111;
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -68,7 +68,7 @@ html {
     margin: 1.4em 2em 0 1em;
     padding: 0em 0em 0em 2em;
     background: rgba(196, 196, 196, 0.1);
-    border: 1px solid rgb(66, 66, 65);
+    border: 1px solid #000000;
     font-size: 20px;
     font-weight: 600;
     word-wrap: break-word;

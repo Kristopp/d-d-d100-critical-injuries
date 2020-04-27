@@ -1,3 +1,4 @@
+
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -18,8 +19,25 @@ module.exports = {
       // New rules to load css
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
-      }
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [ 
+          'file-loader',
+        ] 
+      },
+      {
+        test: /\.svg$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              generator: (content) => svgToMiniDataURI(content.toString()),
+            },
+          },
+        ],
+      },
     ]
   },
   devtool: 'cheap-module-eval-source-map',
