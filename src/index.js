@@ -6,6 +6,7 @@ import {
 //load dom before script
 window.addEventListener("DOMContentLoaded", () => {
   const data = jsonData;
+  console.log(data)
   let dataString = JSON.stringify(data)
   let dataCut = dataString.replace(/ *\([^)]*\) */g, "");
   let dataFinal = JSON.parse(dataCut)

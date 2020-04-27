@@ -18,14 +18,13 @@ module.exports = {
       },
       // New rules to load css
       {
-        test: /\.css$/,
+        test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
-        use: [ 
-          'file-loader',
-        ] 
+        test: /\.(png|jpg)$/,
+        include: path.join(__dirname, 'src/assets/img'),
+        loader: 'file-loader' 
       },
       {
         test: /\.svg$/i,

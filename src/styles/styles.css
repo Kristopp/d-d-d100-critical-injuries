@@ -3,7 +3,7 @@ html {
     height: 100vh;
     width: 100vw;
     box-sizing: border-box;
-    background-image: url(../assets/img/knight-1587138709323-457.jpg);
+    background-image: url(../assets/img/knight.jpg);
     background-position: center center;
     background-size: cover;
 }
@@ -25,7 +25,7 @@ html {
     grid-area: life;
     margin: 1em 0.2em 1em 1em;
     width: 85%;
-    height: 93%;
+    height: 90%;
     background: rgba(252, 252, 252, 0.1);
     border: 3px solid rgb(36, 36, 35);
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -53,9 +53,9 @@ html {
 
 .text-container-death {
     grid-area: death;
-    margin: 1.4em 2em 0 0.7em;
-    width: 80%;
-    height: 93%;
+    margin: 1em 0.2em 1em 1em;
+    width: 85%;
+    height: 90%;
     background: rgba(0, 0, 0, 0);
     border: 3px solid rgb(66, 66, 65);
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
