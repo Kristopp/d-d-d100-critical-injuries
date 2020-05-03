@@ -1,17 +1,16 @@
-
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+//onst url = require('svg-url-loader!./src/assets/img/dice.svg');
 
 module.exports = {
-  watch:true,
+  watch: true,
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js'
   },
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
@@ -22,20 +21,9 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.(png|jpg)$/,
+        test: /\.(png|jpg|svg)$/,
         include: path.join(__dirname, 'src/assets/img'),
-        loader: 'file-loader' 
-      },
-      {
-        test: /\.svg$/i,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              generator: (content) => svgToMiniDataURI(content.toString()),
-            },
-          },
-        ],
+        loader: 'file-loader'
       },
     ]
   },

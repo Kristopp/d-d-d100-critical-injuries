@@ -1,99 +1,158 @@
 .body,
 html {
-    height: 100vh;
-    width: 100vw;
-    box-sizing: border-box;
-    background-image: url(../assets/img/knight.jpg);
-    background-position: center center;
+    height: 100%;
+    width: 100%;
+    background: url(../assets/img/knight.jpg) no-repeat center center fixed;
     background-size: cover;
-    background-repeat: no-repeat;
+    height: 100%;
+    overflow: hidden;
 }
-
 .main-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 0.3rem;
-    grid-template-areas:
-        ". . ."
-        ". . ."
-        ". . ."
-        ". dice .";
     height: 100vh;
     width: 100vw;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 0.3rem;
+    grid-template-areas:
+        ". life ."
+        ". life ."
+        ". life ."
+        ". dice .";
 }
-
 .text-container-life {
     grid-area: life;
-    display: none;
-    margin: 1em 0.2em 1em 1em;
-    width: 50em;
-    height: 100%;
+    display: block;
 }
 
 .text-container-life>div {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    width: 89%;
-    height: 12%;
-    margin: 0.4em 0 0 0.35em;
-    padding: 0em 0em 0em 2em;
-    background: rgba(75, 71, 71, 0.555);
-    border: 1px solid rgb(66, 66, 65);
-    font-size: 24px;
-    font-weight: 600;
-    word-wrap: break-word;
-    letter-spacing: 0.2em;
-    color: #F8F8F7;
+    width: 20rem;
+    height: 4.3rem;
+    margin: 0.4rem 0 0 0.45rem;
+    padding: 0 0 0 1rem;
+    font-size: 1.1em;
+    font-weight: 100;
+    overflow: auto;
+    letter-spacing: 0.1em;
+    background: rgba(179, 179, 179, 0.267);
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: #F8F8F7;
 }
 
-
 /*Death line properties*/
-
 .text-container-death {
     grid-area: death;
     display: none;
-    margin: 1em 0.2em 1em 1em;
-    width: 50em;
-    height: 100%;
-    background: rgba(0, 0, 0, 0);
 }
-
 .text-container-death>div {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    width: 89%;
-    height: 12%;
-    margin: 0.4em 0 0 0.35em;
-    padding: 0em 0em 0em 2em;
-    background: rgba(75, 71, 71, 0.555);
-    border: 1px solid rgb(66, 66, 65);
-    font-size: 24px;
-    font-weight: 600;
-    word-wrap: break-word;
-    letter-spacing: 0.2em;
-    color: rgb(255, 0, 0);
+    width: 20rem;
+    height: 4.3rem;
+    margin: 0.4rem 0 0 0.45rem;
+    padding: 0 0 0 1rem;
+    font-size: 1.1em;
+    font-weight: 100;
+    overflow: auto;
+    letter-spacing: 0.1em;
+    background: rgba(179, 179, 179, 0.267);
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: rgba(255, 0, 0, 0.582);
 }
-
 /*Dice properties*/
 .dice-container {
     grid-area: dice;
-    width: 20%;
-    height: 20%;
-    align-items: center;
-    margin: 1em 0 0 20em;
+    display: flex;
+    justify-content:center ;
+    align-self: center;
+    background-image: url(../assets/img/dice.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0.1rem 0 0 7rem;
+    width: 7rem;
+    height: 7rem;
 }
+/**/
+@media (min-width: 500px) {
+    .body,
+    html {
+        height: 100vh;
+        width: 100vw;
+        box-sizing: border-box;
+        background-image: url(../assets/img/knight.jpg);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
 
+    .main-container {
+        display: grid;
+        height: 100vh;
+        width: 100vw;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 0.3rem;
+        grid-template-areas:
+            ". death ."
+            ". death ."
+            ". death ."
+            ". dice .";
+    }
+    
+    .text-container-life {
+        grid-area: life;
+        display: none;
+    }
+    
+    .text-container-life>div {
+        width: 40rem;
+        height: 4.8rem;
+        margin: 0.5rem 0 0 0;
+        padding: 0 0 0 1rem;
+        font-size: 1.4em;
+        font-weight: 100;
+        overflow: auto;
+        letter-spacing: 0.2em;
+        background: rgba(179, 179, 179, 0.267);
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        color: #F8F8F7;
+    }
+    
+    /*Death line properties*/
+    .text-container-death {
+        grid-area: death;
+        display: block;
+    }
+    .text-container-death>div {
+        width: 40rem;
+        height: 4.8rem;
+        margin: 0.5rem 0 0 0;
+        padding: 0 0 0 1rem;
+        font-size: 1.4em;
+        font-weight: 100;
+        overflow: auto;
+        letter-spacing: 0.2em;
+        background: rgba(179, 179, 179, 0.267);
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        color: rgba(255, 0, 0, 0.582);
+    }
+    /*Dice properties*/
+    .dice-container {
+        grid-area: dice;
+        display: flex;
+        justify-content:center ;
+        align-self: center;
+        background-image: url(../assets/img/dice.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin: 1rem 0 0 15rem;
+        width: 10rem;
+        height: 9.5rem;
+    }
+}
 /*
 ##Device = Desktops
 ##Screen = 1200px to higher resolution desktops
 */
-@media (min-width: 1200px) {
-
+@media (min-width: 1300px) {
     .body,
     html {
         height: 100vh;
@@ -103,7 +162,6 @@ html {
         background-position: center center;
         background-size: cover;
     }
-
     .main-container {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
@@ -117,10 +175,9 @@ html {
         height: 100vh;
         width: 100vw;
     }
-
     .text-container-life {
         grid-area: life;
-        margin: 1em 0.2em 1em 1em;
+        margin: 1rem 0.2rem 1rem 1rem;
         display: block;
         width: 90%;
         height: 90%;
@@ -128,16 +185,15 @@ html {
         border: 3px solid rgb(36, 36, 35);
         box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
-
     .text-container-life>div {
         grid-area: liLife;
         width: 90%;
         height: 12.5%;
-        margin: 0.5em 0em 0 0.6em;
-        padding: 0em 0em 0em 2em;
+        margin: 0.5rem 0rem 0 0.6rem;
+        padding: 0rem 0rem 0rem 2rem;
         background: rgba(65, 64, 64, 0.349);
         border: 1px solid rgb(0, 0, 0);
-        font-size: 24px;
+        font-size: 1.3em;
         font-weight: 600;
         word-wrap: break-word;
         display: flex;
@@ -147,30 +203,26 @@ html {
         color: #F8F8F7;
         text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     }
-
-
     /*Death line properties*/
-
     .text-container-death {
         grid-area: death;
         display: block;
-        margin: 1em 0.2em 1em 1em;
+        margin: 1rem 0.2rem 1rem 1rem;
         width: 90%;
         height: 90%;
         background: rgba(0, 0, 0, 0);
         border: 3px solid rgb(66, 66, 65);
         box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
-
     .text-container-death>div {
         display: flex;
         width: 90%;
         height: 12.5%;
-        margin: 0.5em 0em 0 0.6em;
-        padding: 0em 0em 0em 2em;
+        margin: 0.5rem 0rem 0 0.6rem;
+        padding: 0rem 0rem 0rem 2rem;
         background: rgba(196, 196, 196, 0.1);
         border: 1px solid rgb(66, 66, 65);
-        font-size: 24px;
+        font-size: 1.3em;
         font-weight: 600;
         word-wrap: break-word;
         display: flex;
@@ -180,14 +232,11 @@ html {
         text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
         color: rgb(255, 0, 0);
     }
-
     /*Dice properties*/
     .dice-container {
         grid-area: dice;
-        width: 15em;
-        height: 15px;
-        margin: 5em 0 0 6em;
+        background-image: url(../assets/img/dice.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
     }
-
-
 }

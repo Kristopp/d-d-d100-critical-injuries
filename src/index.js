@@ -2,6 +2,7 @@ import * as jsonData from '../csvjson.json'
 import {
   mainElements
 } from '../src/nodes/getElements'
+import css from './styles/styles.css'
 
 //load dom before script
 window.addEventListener("DOMContentLoaded", () => {
@@ -12,13 +13,14 @@ window.addEventListener("DOMContentLoaded", () => {
   let dataFinal = JSON.parse(dataCut)
   let windowRes = window.matchMedia("(min-width: 1200px)")
 
-  //dice functions
   let dice = () => {
 
     let valueArray = []
     let mainCont = mainElements.mainCont[0];
     const life = mainElements.lifeText[0];
     const death = mainElements.deathText[0];
+
+    //create dice svg
 
     //clear all 
     for (let i = 0; i < 7; i++) {
@@ -43,6 +45,7 @@ window.addEventListener("DOMContentLoaded", () => {
         death.style.display = "block"
         life.style.display = "none"
         mainCont.style.gridTemplateAreas = '". death ."". death ." ". death ." ". dice ."';
+        console.log("else")
       }
     }
     //chek for device reso and adjust
@@ -69,8 +72,6 @@ window.addEventListener("DOMContentLoaded", () => {
       }
     }
     windowRes.addListener(lifeCheckWindow)
-    windowRes.addListener(deathCheckWindow)
   }
-  //dice event
   mainElements.d100[0].addEventListener('click', dice);
 });
