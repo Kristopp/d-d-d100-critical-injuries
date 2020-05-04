@@ -11,7 +11,7 @@ window.addEventListener("DOMContentLoaded", () => {
   let dataString = JSON.stringify(data)
   let dataCut = dataString.replace(/ *\([^)]*\) */g, "");
   let dataFinal = JSON.parse(dataCut)
-  let windowRes = window.matchMedia("(min-width: 1200px)")
+  let windowRes = window.matchMedia("(min-width: 1400px)")
 
   let dice = () => {
 
