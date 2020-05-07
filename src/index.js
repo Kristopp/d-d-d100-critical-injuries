@@ -19,11 +19,18 @@ window.addEventListener("DOMContentLoaded", () => {
     let mainCont = mainElements.mainCont[0];
     const life = mainElements.lifeText[0];
     const death = mainElements.deathText[0];
+    let randomNumber = Math.floor(Math.random() * 100) + 1;
+    //Get random object
+
+    let randomObject = dataFinal.default[Math.floor(Math.random() * dataFinal.default.length)];
+    //Delete 
+    delete randomObject.d100
+    console.log(randomObject)
 
     //create dice svg
 
     //clear all 
-    for (let i = 0; i < 7; i++) {
+    for (let i = 0; i < 5; i++) {
       mainElements.lifeList[i].innerHTML = `* * * * * *`
       mainElements.deathList[i].innerHTML = `* * * * * *`
     }
@@ -45,28 +52,23 @@ window.addEventListener("DOMContentLoaded", () => {
         death.style.display = "block"
         life.style.display = "none"
         mainCont.style.gridTemplateAreas = '". death ."". death ." ". death ." ". dice ."';
-        console.log("else")
       }
     }
-    //chek for device reso and adjust
-    //Get random object
-    let randomObject = dataFinal.default[Math.floor(Math.random() * dataFinal.default.length)];
     //add text into elements
     for (let [key, value] of Object.entries(randomObject)) {
       //Store key value pairs inside array
       valueArray.push((`${key}: ${value}`));
-      if (randomObject.d100 > 50) {
-        //toggle good/bad container and positsion to right place
-  
+      if (randomNumber > 50) {
+
         lifeCheckWindow();
         //generate dynamic values for all text nodes 
-        for (let i = 0; i < 7; i++) {
+        for (let i = 0; i < 5; i++) {
           mainElements.lifeList[i].innerHTML = `${valueArray[i]}`
         }
       } else {
         deathCheckWindow();
         //generate dynamic values for all text nodes 
-        for (let i = 0; i < 7; i++) {
+        for (let i = 0; i < 5; i++) {
           mainElements.deathList[i].innerHTML = `${valueArray[i]}`
         }
       }

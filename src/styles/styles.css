@@ -4,39 +4,36 @@ html {
     width: 100%;
     background: url(../assets/img/knight.jpg) no-repeat center center fixed;
     background-size: cover;
-    height: 100%;
     overflow: hidden;
 }
 
 .main-container {
     display: grid;
-    height: 100vh;
-    width: 100vw;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     gap: 0.2rem;
     grid-template-areas:
         ". life ."
         ". life ."
-        ". life ."
-        ". dice .";
+        ". dice ."
+        ". . .";
 }
 
 .text-container-life {
     grid-area: life;
-    display: block;
 }
 
 .text-container-life>div {
     width: 20rem;
-    height: 4.3rem;
-    margin: 0.4rem 0 0 -1rem;
+    height: 6rem;
+    margin: 0.4rem 0 0 0;
     padding: 0 0 0 1rem;
-    font-size: 1.1em;
+    font-size: 1.5em;
     font-weight: 100;
     overflow: auto;
     letter-spacing: 0.1em;
-    background: rgba(179, 179, 179, 0.267);
+    border: 1px solid rgb(0, 0, 0);
+    background: rgba(196, 196, 196, 0.1);
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     color: #F8F8F7;
 }
@@ -49,28 +46,31 @@ html {
 
 .text-container-death>div {
     width: 20rem;
-    height: 4.3rem;
-    margin: 0.4rem 0 0 -1rem;
+    height: 6rem;
+    margin: 0.4rem 0 0 0;
     padding: 0 0 0 1rem;
-    font-size: 1.1em;
+    font-size: 1.5em;
     font-weight: 100;
     overflow: auto;
     letter-spacing: 0.1em;
-    background: rgba(179, 179, 179, 0.267);
+    border: 1px solid rgb(0, 0, 0);
+    background: rgba(196, 196, 196, 0.1);
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    color: rgba(255, 0, 0, 0.932);
+    color: rgba(255, 0, 0, 0.938);
 }
 
 /*Dice properties*/
 .dice-container {
     grid-area: dice;
+    display: flex;
+    align-items: center;
     background-image: url(../assets/img/dice.svg);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    margin: 2rem 0 0 6rem;
-    width: 7rem;
-    height: 7rem;
+    margin: 0.5rem 0 0 6rem;
+    width: 7.5rem;
+    height: 7.5rem;
 }
 
 /*resolution higher than 600px*/
@@ -78,8 +78,8 @@ html {
 
     .body,
     html {
-        height: 100vh;
-        width: 100vw;
+        height: 100%;
+        width: 100%;
         box-sizing: border-box;
         background-image: url(../assets/img/knight.jpg);
         background-position: center center;
@@ -88,9 +88,7 @@ html {
     }
 
     .main-container {
-        display: grid;
-        height: 100vh;
-        width: 100vw;
+        display: grid;;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(4, 1fr);
         gap: 0.3rem;
@@ -108,14 +106,14 @@ html {
 
     .text-container-life>div {
         width: 40rem;
-        height: 4.8rem;
-        margin: 0.5rem 0 0 0;
+        height: 7rem;
+        margin: 0.7rem 0 0 0;
         padding: 0 0 0 1rem;
-        font-size: 1.4em;
+        font-size: 1.4rem;
         font-weight: 100;
-        overflow: auto;
-        letter-spacing: 0.2em;
-        background: rgba(179, 179, 179, 0.267);
+        letter-spacing: 0.3em;
+        border: 1px solid rgb(0, 0, 0);
+        background: rgba(196, 196, 196, 0.1);
         text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
         color: #F8F8F7;
     }
@@ -128,16 +126,16 @@ html {
 
     .text-container-death>div {
         width: 40rem;
-        height: 4.8rem;
-        margin: 0.5rem 0 0 0;
+        height: 7rem;
+        margin: 0.7rem 0 0 0;
         padding: 0 0 0 1rem;
-        font-size: 1.4em;
+        font-size: 1.4rem;
         font-weight: 100;
-        overflow: auto;
-        letter-spacing: 0.2em;
-        background: rgba(179, 179, 179, 0.267);
+        letter-spacing: 0.3em;
+        border: 1px solid rgb(0, 0, 0);
+        background: rgba(90, 89, 89, 0.39);
         text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-        color: rgba(255, 0, 0, 0.932);
+        color: rgba(255, 0, 0, 0.938);
     }
 
     /*Dice properties*/
@@ -148,8 +146,8 @@ html {
         background-size: cover;
         background-repeat: no-repeat;
         margin: 1rem 0 0 15rem;
-        width: 10rem;
-        height: 9.5rem;
+        width: 9rem;
+        height: 9rem;
     }
 }
 
@@ -161,8 +159,8 @@ html {
 
     .body,
     html {
-        height: 100vh;
-        width: 100vw;
+        height: 100%;
+        width: 100%;
         box-sizing: border-box;
         background-image: url(../assets/img/knight.jpg);
         background-position: center center;
@@ -179,30 +177,21 @@ html {
             "life life . death death"
             "life life dice death death"
             "life life . death death";
-        height: 100vh;
-        width: 100vw;
     }
 
     .text-container-life {
         grid-area: life;
-        margin: 1rem 0.2rem 1rem 1rem;
         display: block;
-        width: 90%;
-        height: 90%;
-        background: rgba(252, 252, 252, 0.1);
-        border: 3px solid rgb(36, 36, 35);
-        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
 
     .text-container-life>div {
-        grid-area: liLife;
-        width: 90%;
-        height: 12.5%;
-        margin: 0.5rem 0rem 0 0.6rem;
+        width: 44rem;
+        height: 9rem;
+        margin: 1rem 0rem 0 0.6rem;
         padding: 0rem 0rem 0rem 2rem;
-        background: rgba(65, 64, 64, 0.349);
+        background: rgba(196, 196, 196, 0.1);
         border: 1px solid rgb(0, 0, 0);
-        font-size: 1.3em;
+        font-size: 1.6rem;
         font-weight: 600;
         word-wrap: break-word;
         display: flex;
@@ -217,23 +206,16 @@ html {
     .text-container-death {
         grid-area: death;
         display: block;
-        margin: 1rem 0.2rem 1rem 1rem;
-        width: 90%;
-        height: 90%;
-        background: rgba(0, 0, 0, 0);
-        border: 3px solid rgb(66, 66, 65);
-        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
 
     .text-container-death>div {
-        display: flex;
-        width: 90%;
-        height: 12.5%;
-        margin: 0.5rem 0rem 0 0.6rem;
+        width: 44rem;
+        height: 9rem;
+        margin: 1rem 0rem 0 0.6rem;
         padding: 0rem 0rem 0rem 2rem;
         background: rgba(196, 196, 196, 0.1);
-        border: 1px solid rgb(66, 66, 65);
-        font-size: 1.3em;
+        border: 1px solid rgb(0, 0, 0);
+        font-size: 1.6rem;
         font-weight: 600;
         word-wrap: break-word;
         display: flex;
@@ -251,5 +233,7 @@ html {
         background-repeat: no-repeat;
         background-size: contain;
         margin: 0 0 0 6rem;
+        width: 12rem;
+        height: 12rem;
     }
 }
