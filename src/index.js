@@ -21,19 +21,19 @@ window.addEventListener("DOMContentLoaded", () => {
     const death = mainElements.deathText[0];
     let randomNumber = Math.floor(Math.random() * 100) + 1;
     //Get random object
-
     let randomObject = dataFinal.default[Math.floor(Math.random() * dataFinal.default.length)];
-    //Delete 
     delete randomObject.d100
-    console.log(randomObject)
-
-    //create dice svg
+    let objectKeys = Object.keys(randomObject)
+    
+    
 
     //clear all 
+    console.log(randomObject)
+
     for (let i = 0; i < 5; i++) {
-      mainElements.lifeList[i].innerHTML = `* * * * * *`
-      mainElements.deathList[i].innerHTML = `* * * * * *`
-    }
+      mainElements.lifeList[i].innerHTML = `${objectKeys[i]} + "* * * * *"`
+      mainElements.deathList[i].innerHTML = `${objectKeys[i]} + " * * * * *"`
+    } 
     let lifeCheckWindow = () => {
       if (windowRes.matches) {
         mainCont.style.gridTemplateAreas = '"life life . death death" "life life . death death" "life life dice death death" "life life . death death"'
