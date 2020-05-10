@@ -31,8 +31,8 @@ window.addEventListener("DOMContentLoaded", () => {
     console.log(randomObject)
 
     for (let i = 0; i < 5; i++) {
-      mainElements.lifeList[i].innerHTML = `${objectKeys[i]} + "* * * * *"`
-      mainElements.deathList[i].innerHTML = `${objectKeys[i]} + " * * * * *"`
+      mainElements.lifeList[i].innerHTML = `${objectKeys[i] + "* * * * *"}`
+      mainElements.deathList[i].innerHTML = `${objectKeys[i]+ " * * * * *"} `
     } 
     let lifeCheckWindow = () => {
       if (windowRes.matches) {
