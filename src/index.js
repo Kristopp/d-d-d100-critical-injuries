@@ -24,16 +24,14 @@ window.addEventListener("DOMContentLoaded", () => {
     let randomObject = dataFinal.default[Math.floor(Math.random() * dataFinal.default.length)];
     delete randomObject.d100
     let objectKeys = Object.keys(randomObject)
-    
-    
 
-    //clear all 
     console.log(randomObject)
-
+    //restore default values
     for (let i = 0; i < 5; i++) {
-      mainElements.lifeList[i].innerHTML = `${objectKeys[i] + "* * * * *"}`
-      mainElements.deathList[i].innerHTML = `${objectKeys[i]+ " * * * * *"} `
+      mainElements.lifeList[i].innerHTML = `${objectKeys[i]}`
+      mainElements.deathList[i].innerHTML = `${objectKeys[i]} `
     } 
+    //toggle between life /death containers
     let lifeCheckWindow = () => {
       if (windowRes.matches) {
         mainCont.style.gridTemplateAreas = '"life life . death death" "life life . death death" "life life dice death death" "life life . death death"'
