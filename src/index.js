@@ -3,6 +3,7 @@ import {
   mainElements
 } from '../src/nodes/getElements'
 import css from './styles/styles.css'
+import '../src/assets/img/favicon.ico';
 
 //load dom before script
 window.addEventListener("DOMContentLoaded", () => {
@@ -24,8 +25,7 @@ window.addEventListener("DOMContentLoaded", () => {
     let randomObject = dataFinal.default[Math.floor(Math.random() * dataFinal.default.length)];
     delete randomObject.d100
     let objectKeys = Object.keys(randomObject)
-
-    console.log(randomObject)
+    
     //restore default values
     for (let i = 0; i < 5; i++) {
       mainElements.lifeList[i].innerHTML = `${objectKeys[i]}`
