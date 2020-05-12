@@ -11,7 +11,7 @@ html {
     background: rgba(24, 23, 23, 0.863);
     height: 0.3em;
     padding: 1.3em;
-    margin:-0.4em -0.4em 0em -0.4em;
+    margin:-0.5em -0.5em 0em -0.5em;
     text-align: center;
     font-size: 1rem;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
@@ -39,7 +39,7 @@ html {
     height: 6rem;
     margin: 0.3rem 0 0 0;
     padding: 0 0 0 1rem;
-    font-size: 1.5em;
+    font-size: 1.4em;
     font-weight: 100;
     text-align: center;
     overflow: auto;
@@ -86,7 +86,7 @@ html {
 }
 
 /*resolution higher than 600px*/
-@media (min-width: 800px) {
+@media (min-width: 64em) {
     .body,
     html {
         margin: 0;
@@ -102,7 +102,7 @@ html {
         height: 1em;
         padding: 1em;
         margin:-0.4em -0.4em 0em -0.4em;
-        text-align: center;
+        text-align: left;
         font-size: 1.7rem;
         text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
         color: #F8F8F7;
@@ -182,7 +182,7 @@ html {
 ##Device = Desktops
 ##Screen = 1200px to higher resolution desktops
 */
-@media (min-width:1500px) {
+@media (min-width:110em) {
 
     .body,
     html {
@@ -222,9 +222,6 @@ html {
         font-weight: 600;
         overflow: auto;
         text-align: center;
-        display: flex;
-        align-items: center;
-        text-align: center;
         letter-spacing: 0.2em;
         color: #F8F8F7;
         text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
@@ -247,9 +244,6 @@ html {
         font-size: 1.6rem;
         font-weight: 600;
         overflow: auto;
-        display: flex;
-        align-items: center;
-        text-align: center;
         letter-spacing: 0.2em;
         text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
         color: rgba(255, 0, 0, 0.938);
@@ -261,7 +255,8 @@ html {
         background-image: url(../assets/img/dice.svg);
         background-repeat: no-repeat;
         background-size: contain;
-        align-items: start;
+        margin-left: auto;
+        margin-right: auto;
         width: 12rem;
         height: 12rem;
     }
